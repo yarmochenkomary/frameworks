@@ -1,0 +1,40 @@
+{
+	"info": {
+		"name": "Laravel Event CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Events",
+			"request": {
+				"method": "GET",
+				"url": { "raw": "http://127.0.0.1:8000/events", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["events"] }
+			}
+		},
+		{
+			"name": "Create Event",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": { "mode": "raw", "raw": "{\n    \"title\": \"Rock Concert\",\n    \"date\": \"2026-08-30\",\n    \"location\": \"Київ\"\n}" },
+				"url": { "raw": "http://127.0.0.1:8000/events", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["events"] }
+			}
+		},
+		{
+			"name": "Update Event",
+			"request": {
+				"method": "PATCH",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": { "mode": "raw", "raw": "{\n    \"title\": \"Rock Concert Online\"\n}" },
+				"url": { "raw": "http://127.0.0.1:8000/events/1", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["events", "1"] }
+			}
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"method": "DELETE",
+				"url": { "raw": "http://127.0.0.1:8000/events/1", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["events", "1"] }
+			}
+		}
+	]
+}
